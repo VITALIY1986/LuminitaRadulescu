@@ -91,7 +91,7 @@ function Fashion({ preview, allPosts }) {
                     <ReactPlayer url="https://www.facebook.com/cotidianul.bzi/videos/luminita-radulescu-23052018/1653958197972588/?locale=ro_RO"  controls  width='100%' height='100%'/>
                     </Block>
                     <Block className="py-4 px-4 md:px-8 pb-20 ">
-                    <ReactPlayer url="https://www.facebook.com/cotidianul.bzi/videos/luminita-radulescu-23052018/1653958197972588/?locale=ro_RO"  controls  width='100%' height='100%'/>
+                    <ReactPlayer url="https://www.facebook.com/iasitvlife.ro/videos/502190624100643/"  controls  width='100%' height='100%'/>
                     </Block>
                     <Block className="py-24 px-4 md:px-8">
                         <Swiper modules={[SwiperPagination]} pagination={{ clickable: true }} className="swiper--light">
@@ -123,10 +123,10 @@ function Fashion({ preview, allPosts }) {
                         <Heading className="text-center">
                             <Heading.Title>
                                 <h2 className="text-45 text-2xl md:text-5xl font-extrabold leading-tight mb-8">
-                                    <span>Follow us on </span>
-                                    <span style={{ color: "#d10000" }}>Instagram</span>
+                                    <span>Urmăriți postările mele pe  </span>
+                                    <span style={{ color: "#c88861" }}>Instagram</span>
                                     <br></br>
-                                    <span>Lorem Ipsum</span>
+                                    
                                 </h2>
                             </Heading.Title>
                             <Heading.Subtitle>
