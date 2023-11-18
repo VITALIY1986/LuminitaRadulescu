@@ -67,7 +67,7 @@ export default function Header(props) {
                         <Button
                             type="menu"
                             active={overlay}
-                            className="w-full h-full bg-blue-500 text-white"
+                            className="w-full h-full bg-orange-800 text-white"
                             onClick={() => {
                                 setOverlay(!overlay);
                             }}

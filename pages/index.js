@@ -7,6 +7,7 @@ import Magazine from "../components/Magazine";
 import { Block, Row, Col } from "../components/Grid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination as SwiperPagination } from "swiper";
+import ReactPlayer from 'react-player'
 import { getAllPostsForHome } from '../lib/api'
 // Import Swiper styles
 import "swiper/css";
@@ -21,32 +22,21 @@ function Fashion({ preview, allPosts }) {
     const AvtorBlogSort = allPosts.filter(word => word.author.name === 'Gabriela');
     const Avtor = AvtorBlogSort[0].coverImage.url
     const AvtorTitle = AvtorBlogSort[0].title
-  
+   
     return (
         <>
 <Meta />
             <Magazine>
-                <Magazine.Cover image={Avtor}   unoptimized={true}>
-                    <div className="absolute left-3 md:left-8 bottom-3 md:bottom-8">
-                        <Animate name="fadeIn" delay="1.2s" duration="1s">
-                            <Image alt="alt" src={'/assets/images/other/barcode-qr.png'} width={69} height={69}   unoptimized={true} />
-                        </Animate>
-                    </div>
-                    <Heading className="absolute left-3 md:left-8 top-32 md:top-48 text-white">
-                   
-                    
-                    </Heading>
-                    <Heading className="absolute right-3 md:right-8 bottom-3 md:bottom-8 text-white text-right">
-                        <Heading.Title>
-                            <Animate name="fadeInRightSm" delay="1.2s" duration="2s">
-                                <h2 className="text-3xl text-white uppercase w-10 mr-3 ">
+            <Magazine.Cover image={Avtor}   unoptimized={true}>
+                    <Heading className="absolute left-4 md:left-8 bottom-40 md:bottom-20">
+                        <Animate name="fadeIn" delay="1.2s" duration="2s">
+                            <Heading.Title>
+                                <h1 className="text-white text-5xl font-extrabold leading-tight ">
                                 {AvtorTitle}
-                            
-                                </h2>
-                            </Animate>
-                        </Heading.Title>
-                        <Heading.Subtitle>
-                            <Animate name="fadeIn" delay="1.8s" duration="3s">
+                                </h1>
+                            </Heading.Title>
+                            <Heading.Subtitle>
+                          
                                 <p className="text-white">
                                 Medic specialist 
                                     <br />
@@ -54,11 +44,52 @@ function Fashion({ preview, allPosts }) {
                                     <br />
                                     <b className="text-xs text-white">Strada Pantelimon Halipa 14, Iași 700661</b>
                                 </p>
-                            </Animate>
+                            
                         </Heading.Subtitle>
+                        </Animate>
                     </Heading>
+                    <div className="absolute right-3 md:right-8 bottom-20">
+                        <Animate name="fadeIn" delay="1.2s" duration="2s">
+                            <Image className="App-logo" src="/assets/images/other/most-popular-yellow.png" width={90} height={90} alt="travel" />
+                        </Animate>
+                    </div>
+                    <Magazine.Footer className="absolute bottom-6 w-100" color="#fff" />
                 </Magazine.Cover>
-                <Magazine.Content className="bg-white overflow-x-hidden">
+              
+
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+                <Magazine.Content>
+                    <Block className="py-24 px-4 md:px-8 pb-20 xl:pb-52">
+                        <Heading>
+                            <Heading.Title>
+                                <h2 className="xl:absolute lg:left-8 xl:-left-32 right-8 text-4xl md:text-5xl font-extrabold  leading-tight text-white">
+                                    <span  style={{ color: " #c88861" }}>Lorem Ipsum is simply dummy text  </span>
+                                    <span style={{ color: "#702b55" }}>of the printing and typesetting industry.</span>
+                                </h2>
+                            </Heading.Title>
+                        </Heading>
+                    </Block>
+                    <Block className="py-24 px-4 md:px-8 pb-20 xl:pb-52">
+                    <ReactPlayer url="https://www.youtube.com/watch?v=LdqOnbY1sjc"  controls  width='100%'/>
+                    </Block>
                     <Block className="py-24 px-4 md:px-8">
                         <Swiper modules={[SwiperPagination]} pagination={{ clickable: true }} className="swiper--light">
                             {morePosts &&
@@ -71,22 +102,7 @@ function Fashion({ preview, allPosts }) {
                                 ))}
                         </Swiper>
                     </Block>
-                    <Block className="px-4 md:px-8 pb-8 mb-16">
-                        <Row className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3">
-                            {morePosts &&
-                                morePosts.length > 0 &&
-                                morePosts
-                                .filter(item => item.author.name !== 'Gabriela' )
-                                .map((item, index) => (
-                                    <Col key={item.slug} className="">
-                                        <Animate name="fadeInUpXs" delay={`${index + 3}00ms`} duration="1.8s">
-                                            <Post post={item} model={1} image_width={334} image_height={334} image_quality={100} />
-                                        </Animate>
-                                    </Col>
-                                ))}
-                        </Row>
-                    </Block>
-                    <Block className="px-4 md:px-8 pb-8">
+  <Block className="px-4 md:px-8 pb-8">
                         <Row className="row row-md row--alt">
                             {morePosts &&
                                  morePosts
@@ -100,7 +116,25 @@ function Fashion({ preview, allPosts }) {
                                 ))}
                         </Row>
                     </Block>
-                    <Magazine.Footer className="mt-2 mb-8" color="#333"/>
+                    <Block className="px-8 pb-8">
+                        <Heading className="text-center">
+                            <Heading.Title>
+                                <h2 className="text-45 text-2xl md:text-5xl font-extrabold leading-tight mb-8">
+                                    <span>Follow us on </span>
+                                    <span style={{ color: "#d10000" }}>Instagram</span>
+                                    <br></br>
+                                    <span>Lorem Ipsum</span>
+                                </h2>
+                            </Heading.Title>
+                            <Heading.Subtitle>
+                                <div>
+                                    <a href="#" rel="no-follow">
+                                        <Image src="/assets/images/icons/instagram.png" alt="Instagram Logo" width={64} height={64} />
+                                    </a>
+                                </div>
+                            </Heading.Subtitle>
+                        </Heading>
+                    </Block>
                 </Magazine.Content>
             </Magazine>
         </>
