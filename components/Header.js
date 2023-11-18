@@ -77,11 +77,7 @@ export default function Header(props) {
                             <span></span>
                         </Button>
                     </div>
-                    <div className={`${styles.header__nav__logo} bg-white font-extrabold font-heading text-black`} style={{ fontSize: 33 }}>
-                    <a href="/">
-                    <span>M</span>
-                            </a> 
-                    </div>
+                   
                 </div>
             </header>
         </>
@@ -100,7 +96,7 @@ const links = [
         items: [
             {
                 title: "instagram",
-                path: "https://www.instagram.com/dr.guma_constantin_orl",
+                path: "/",
             },
          
         ],

@@ -3,7 +3,8 @@ import Head from "next/head";
 const Meta = ({ title, keywords, description }) => {
     return (
         <Head>
-            <title>Medic specialist - GUMA CONSTANTIN </title>
+            <title>Profesor Doctor
+Rădulescu Luminița Mihaela</title>
             <meta charSet="utf-8" />
             <meta name="rating" content="general" />
             <meta name="author" content="www" />
@@ -18,7 +19,7 @@ const Meta = ({ title, keywords, description }) => {
 };
 
 Meta.defaultProps = {
-    title: "Medic specialist - GUMA CONSTANTIN",
+    title: "Profesor Doctor Rădulescu Luminița Mihaela",
     keywords: "Strada Pantelimon Halipa 14, Iași 700661",
     description: "Strada Pantelimon Halipa 14, Iași 700661",
 };
